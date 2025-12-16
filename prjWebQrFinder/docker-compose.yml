@@ -1,0 +1,49 @@
+# Docker Compose - prjWebQrFinder (API Node.js + MongoDB)
+
+version: '3.8'
+
+services:
+  # API Node.js pour gérer les objets perdus
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: qrfinder-api
+    container_name: qrfinder-api-container
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - MONGODB_URI=mongodb://mongodb:27017/qrfinder
+      - NODE_ENV=production
+    depends_on:
+      - mongodb
+    networks:
+      - qrfinder-network
+    restart: unless-stopped
+    volumes:
+      - ./server.js:/app/server.js
+
+  # Base de données MongoDB
+  mongodb:
+    image: mongo:7.0
+    container_name: qrfinder-mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - qrfinder-network
+    restart: unless-stopped
+    environment:
+      - MONGO_INITDB_DATABASE=qrfinder
+
+# Volume pour la persistance des données
+volumes:
+  mongo-data:
+    driver: local
+
+# Réseau pour la communication entre services
+networks:
+  qrfinder-network:
+    driver: bridge

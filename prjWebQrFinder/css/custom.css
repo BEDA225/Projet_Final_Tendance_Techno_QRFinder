@@ -1,0 +1,396 @@
+﻿/*
+    Custom CSS for QRFinder Application
+*/
+
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+    padding-top: 80px;
+}
+
+h5 {
+    color: #FF7F00;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+    .logo span {
+        color: #FF7F00;
+    }
+
+header {
+    background-color: #0B1F3A;
+}
+
+.nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+}
+
+    .nav-link:hover {
+        color: #FF7F00 !important;
+    }
+
+footer {
+    margin-top: auto;
+    background-color: #0B1F3A;
+    color: #ffffff;
+}
+
+    footer a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+        footer a:hover {
+            color: #FF7F00;
+            text-decoration: underline;
+        }
+
+.footer-logo span {
+    color: #FF7F00;
+}
+
+.text-muted {
+    color: #cccccc !important;
+}
+
+.fixed-top {
+    z-index: 1030;
+}
+
+.nav-link.connexion-btn {
+    background-color: #0B1F3A;
+    border: 2px solid #FF7F00;
+    color: #FF7F00 !important;
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+    .nav-link.connexion-btn:hover {
+        background-color: #FF7F00;
+        color: #ffffff !important;
+    }
+
+
+
+
+
+
+
+
+/* ===================================
+       COULEURS PRINCIPALES QRFINDER
+       Orange: #FF7F00
+       Bleu foncé: #0B1F3A
+       =================================== */
+
+/* Banner orange */
+.inner-banner-one {
+    background: #FF7F00 !important;
+    padding: 80px 0 80px !important;
+    z-index: 9;
+}
+
+    .inner-banner-one h2 {
+        color: white;
+        font-weight: bold;
+    }
+
+    .inner-banner-one p {
+        color: rgba(255, 255, 255, 0.95);
+    }
+
+    /* Formulaire de recherche */
+    .inner-banner-one .bg-white {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Bouton recherche */
+    .inner-banner-one .btn,
+    #btnChercher {
+        background: #0B1F3A !important;
+        color: white !important;
+        border: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+        .inner-banner-one .btn:hover,
+        #btnChercher:hover {
+            background: #FF7F00 !important;
+            color: white !important;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 127, 0, 0.4);
+        }
+
+/* Section QRFinder Intro */
+.qrfinder-intro-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-top: 4px solid #FF7F00;
+    border-bottom: 4px solid #0B1F3A;
+}
+
+    .qrfinder-intro-section h1 {
+        color: #0B1F3A;
+        font-size: 2.5rem;
+    }
+
+    .qrfinder-intro-section h2 {
+        color: #FF7F00;
+    }
+
+    .qrfinder-intro-section .lead {
+        color: #555;
+    }
+
+/* Cartes de statistiques */
+.stat-card {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+    .stat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(255, 127, 0, 0.2) !important;
+        border-color: #FF7F00;
+    }
+
+    .stat-card .text-danger {
+        color: #FF7F00 !important;
+    }
+
+    .stat-card .text-success {
+        color: #0B1F3A !important;
+    }
+
+    .stat-card .text-info {
+        color: #FF7F00 !important;
+    }
+
+/* Boutons d'action */
+.action-buttons .btn-primary {
+    background: linear-gradient(135deg, #FF7F00 0%, #ff9933 100%) !important;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+    .action-buttons .btn-primary:hover {
+        background: linear-gradient(135deg, #ff9933 0%, #FF7F00 100%) !important;
+        transform: translateX(5px);
+        box-shadow: 0 5px 20px rgba(255, 127, 0, 0.4) !important;
+    }
+
+.action-buttons .btn-success {
+    background: linear-gradient(135deg, #0B1F3A 0%, #1a3a5f 100%) !important;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+    .action-buttons .btn-success:hover {
+        background: linear-gradient(135deg, #1a3a5f 0%, #0B1F3A 100%) !important;
+        transform: translateX(5px);
+        box-shadow: 0 5px 20px rgba(11, 31, 58, 0.4) !important;
+    }
+
+.action-buttons .btn-outline-dark {
+    border-color: #0B1F3A;
+    color: #0B1F3A;
+    font-weight: 600;
+}
+
+    .action-buttons .btn-outline-dark:hover {
+        background-color: #0B1F3A !important;
+        border-color: #0B1F3A !important;
+        color: white !important;
+        transform: translateX(5px);
+    }
+
+.action-buttons .btn-outline-primary {
+    border-color: #FF7F00;
+    color: #FF7F00;
+    font-weight: 600;
+}
+
+    .action-buttons .btn-outline-primary:hover {
+        background-color: #FF7F00 !important;
+        border-color: #FF7F00 !important;
+        color: white !important;
+    }
+
+/* Cartes d'objets trouvés */
+.candidate-profile-card {
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+    .candidate-profile-card:hover {
+        border-color: #FF7F00;
+        box-shadow: 0 5px 20px rgba(255, 127, 0, 0.15);
+        transform: translateY(-5px);
+    }
+
+    .candidate-profile-card .profile-btn {
+        background: #FF7F00;
+        color: white;
+        border: none;
+    }
+
+        .candidate-profile-card .profile-btn:hover {
+            background: #0B1F3A;
+            color: white;
+        }
+
+    .candidate-profile-card .msg-btn {
+        background: #0B1F3A;
+        color: white;
+        border: none;
+    }
+
+        .candidate-profile-card .msg-btn:hover {
+            background: #FF7F00;
+            color: white;
+        }
+
+    .candidate-profile-card .save-btn {
+        color: #FF7F00;
+    }
+
+        .candidate-profile-card .save-btn:hover {
+            color: #0B1F3A;
+        }
+
+/* Filtres */
+.upper-filter .filter-btn {
+    background: #FF7F00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+    .upper-filter .filter-btn:hover {
+        background: #0B1F3A;
+    }
+
+.upper-filter .style-changer-btn.active {
+    background: #FF7F00;
+    color: white;
+}
+
+.upper-filter .style-changer-btn:hover {
+    background: #0B1F3A;
+    color: white;
+}
+
+/* Pagination */
+.pagination-two li.active a {
+    background: #FF7F00;
+    color: white;
+    border-color: #FF7F00;
+}
+
+.pagination-two li a:hover {
+    background: #0B1F3A;
+    color: white;
+    border-color: #0B1F3A;
+}
+
+/* Liens */
+a {
+    color: #FF7F00;
+}
+
+    a:hover {
+        color: #0B1F3A;
+    }
+
+/* Texte primaire */
+.text-primary {
+    color: #FF7F00 !important;
+}
+
+/* Backgrounds */
+.bg-primary {
+    background-color: #FF7F00 !important;
+}
+
+.bg-dark {
+    background-color: #0B1F3A !important;
+}
+
+/* Badges */
+.badge-primary {
+    background-color: #FF7F00;
+}
+
+.badge-secondary {
+    background-color: #0B1F3A;
+}
+
+/* Dropdowns */
+.form-select:focus,
+.form-control:focus {
+    border-color: #FF7F00;
+    box-shadow: 0 0 0 0.2rem rgba(255, 127, 0, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .inner-banner-one {
+        padding: 60px 0 !important;
+    }
+
+    .qrfinder-intro-section h1 {
+        font-size: 2rem;
+    }
+
+    .qrfinder-intro-section h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .stat-card {
+        margin-bottom: 10px;
+    }
+
+    .action-buttons .btn {
+        padding: 12px 15px;
+    }
+}
+
+
+/* Modal de filtre personnalisé */
+#filterPopUp .modal-content {
+    border-radius: 15px;
+    border: 3px solid #FF7F00;
+}
+
+#filterPopUp .filter-title {
+    color: #0B1F3A;
+    font-weight: 600;
+}
+
+#filterPopUp .form-control:focus,
+#filterPopUp .form-select:focus {
+    border-color: #FF7F00;
+    box-shadow: 0 0 0 0.25rem rgba(255, 127, 0, 0.25);
+}
+
+#filterPopUp .btn-close {
+    background-color: #FF7F00;
+    opacity: 1;
+}

@@ -1,0 +1,159 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPageConnexion.Master.cs" Inherits="prjWebQrFinder.MasterPageInscription" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+  <meta charset="utf-8" />
+  <title>QR Finder</title>
+
+  <!-- Styles -->
+  <link href="mesStyles/styles.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <asp:ContentPlaceHolder ID="head" runat="server" />
+
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-color: #f8f9fa;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.8rem;
+      color: #ffffff;
+    }
+
+    .logo span {
+      color: #FF7F00;
+    }
+
+    header {
+      background-color: #0B1F3A;
+    }
+
+    .nav-link {
+      color: #ffffff !important;
+      font-weight: 500;
+    }
+
+    .nav-link:hover {
+      color: #FF7F00 !important;
+    }
+
+    .nav-link.connexion-btn {
+      background-color: #ffffff;
+      border: 2px solid #FF7F00;
+      color: #FF7F00 !important;
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .nav-link.connexion-btn:hover {
+      background-color: #FF7F00;
+      color: #ffffff !important;
+    }
+
+    footer {
+      margin-top: auto;
+      background-color: #0B1F3A;
+      color: #ffffff;
+    }
+
+    footer a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #FF7F00;
+      text-decoration: underline;
+    }
+
+    .footer-logo span {
+      color: #FF7F00;
+    }
+
+    .text-muted {
+      color: #cccccc !important;
+    }
+  </style>
+</head>
+<body>
+  <form id="form1" runat="server" class="flex-grow-1">
+
+    <!-- ✅ Header fixe -->
+    <header class="py-3 shadow-sm fixed-top">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div class="logo">QR<span>Finder</span></div>
+        <nav>
+          <ul class="nav gap-3">
+            <li class="nav-item"><a class="nav-link" href="indexQrFinder.aspx">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="boutiqueFinder.aspx">Boutique QR</a></li>
+            <li class="nav-item"><a class="nav-link" href="objetsperdusFinder.aspx">Objets Perdus</a></li>
+            <li class="nav-item"><a class="nav-link" href="objetstrouvesFinder.aspx">Objets Trouvés</a></li>
+            <li class="nav-item"><a class="nav-link connexion-btn" href="inscriptionQrFinder.aspx">S'inscrire</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ✅ Contenu dynamique -->
+    <main class="container py-4" style="padding-top: 80px;">
+      <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />
+    </main>
+
+    <!-- ✅ Footer harmonisé -->
+    <footer class="pt-5 pb-3">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-3">
+            <h4 class="footer-logo">QR<span>Finder</span></h4>
+            <p class="small text-muted">Plateforme solidaire qui facilite la déclaration et la recherche d’objets égarés.</p>
+          </div>
+          <div class="col-md-3">
+            <h5>Liens rapides</h5>
+            <ul class="list-unstyled">
+              <li><a href="indexFinder.aspx">Accueil</a></li>
+              <li><a href="boutiqueFinder.aspx">Boutique QR</a></li>
+              <li><a href="objetsperdusFinder.aspx">Objets Perdus</a></li>
+              <li><a href="objetstrouvesFinder.aspx">Objets Trouvés</a></li>
+              <li><a href="connexionFinder.aspx">Connexion</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5>Contact</h5>
+            <ul class="list-unstyled">
+              <li>✉️ <span class="ms-1">qrfinder@gmail.com</span></li>
+              <li>📱 <span class="ms-1">438 4807 49 43</span></li>
+              <li>📍 <span class="ms-1">Montréal, Québec</span></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5>Suivez-nous</h5>
+            <div class="d-flex gap-3">
+              <a href="https://facebook.com/qrfinder" class="fs-5"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://twitter.com/qrfinder" class="fs-5"><i class="fab fa-twitter"></i></a>
+              <a href="https://instagram.com/qrfinder" class="fs-5"><i class="fab fa-instagram"></i></a>
+              <a href="https://linkedin.com/company/qrfinder" class="fs-5"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <hr class="border-light mt-4" />
+        <div class="text-center">
+          <p class="mb-0 small text-muted">&copy; 2025 QRFinder. Tous droits réservés.</p>
+        </div>
+      </div>
+    </footer>
+
+  </form>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
